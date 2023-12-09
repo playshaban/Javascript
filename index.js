@@ -2,7 +2,7 @@
 // console.log("Shaban Khan JavaScript Notes December 2023 ...");
 
 /*
-==================================================================
+===============================================================================================================
 2. Data Types in JS
 
  var myName = "Shaban Khan";
@@ -20,7 +20,7 @@ console.log(typeof(isAdmin))
 */
 
 /*
-==================================================================
+===============================================================================================================
 Challange 1 Guess the output
 
 we are using typeof() for getting type of data
@@ -49,7 +49,7 @@ console.log(false-true) //-1 (int)
 */
 
 /*
-==================================================================
+===============================================================================================================
 Question 1 "What is the difference between "null" & "undefine"
 
 var myVar;
@@ -60,7 +60,7 @@ console.log(myNull) // null (object)
 */
 
 /*
-==================================================================
+===============================================================================================================
 Question 2 What is NaN (Not a Number )
 Ans : if we want to perform any arithimatic operation between
 (string & string), (string & integer) other than addition , it will return NaN value , which means it
@@ -82,7 +82,7 @@ console.log(Number.isNaN(NaN)) //true
 */
 
 /*
-==================================================================
+===============================================================================================================
 3. Operators in JavaScript
 
     3.1 Aassignment operator 
@@ -97,6 +97,8 @@ console.log(Number.isNaN(NaN)) //true
     //so always use new mehtod
     console.log(`Is two variable equal ${myVar1 === myVar2}`)
 
+    ________________________________________________________________________________________________
+
 
    3.2 Arithematic operators 
     It take two operands and give one output
@@ -106,6 +108,7 @@ console.log(Number.isNaN(NaN)) //true
     console.log(7*7) //49
     console.log(12%10) //2 remainder
 
+    ________________________________________________________________________________________________
 
     3.3 Increament and Decrement operator prefix(++i) postfix(i++)
 
@@ -119,6 +122,7 @@ console.log(Number.isNaN(NaN)) //true
     console.log(num); // 6
     console.log(new_num) //6
 
+    ________________________________________________________________________________________________
 
     3.4 Comparison operator 
 
@@ -134,6 +138,7 @@ console.log(Number.isNaN(NaN)) //true
     var b=40 
     console.log(a==b) // true
 
+    ________________________________________________________________________________________________
 
     3.5 Logical Operator returns(true/false)
 
@@ -149,7 +154,7 @@ console.log(Number.isNaN(NaN)) //true
     // ! (NOT operator) returns opposite 
     console.log(!(a==b)) // flase
 
-
+    ________________________________________________________________________________________________
     3.5 String Operators
 
     //concatination operators (+)
@@ -186,29 +191,27 @@ Q.4 what is differance between ==  and ===
 
  */
 
-// ==================================================================
+// ===============================================================================================================
 // 4. Controll statements and loops
-//     4.1 if else statement 
+//     4.1 if else statement
 
 //         var isRaining = true;
 //         if(isRaining)
 //         {
 //             console.log("Take Umbrella");
 //         }
-//         else 
+//         else
 //         {
 //             console.log("No Need to take Umbrella");
 //         }
-
-
+//      ________________________________________________________________________________________________
 //     4.2 ternary Operator  (condition)?"true":"false"
 //         var age = 18;
 //         console.log((age>=18)? "You  are eligible ":"Not Eligible")
-//         //you are eligible 
-
-
+//         //you are eligible
+//      ________________________________________________________________________________________________
 //     4.3 Switch Statements
-
+//      
 //         var poption = 3;
 
 //         switch(poption)
@@ -222,42 +225,39 @@ Q.4 what is differance between ==  and ===
 //             case 3:
 //                 console.log("You choosed option 3");
 //                 break;
-//             default: 
+//             default:
 //                 console.log("You didn't selected defined option ")
 //                 break;
 
 //         }
-    
+//      ________________________________________________________________________________________________
 
-
-//     4.4 While loop 
+//     4.4 While loop
 //         var c = 10
 //         while(c--)
 //         {
 //             console.log("Hello world")
 //         }
 
+//      ________________________________________________________________________________________________
 
-//     4.5 do while // it will run minimum 1 time 
+//     4.5 do while // it will run minimum 1 time
 
 //         var num =1;
 
 //         do {
 //             console.log(num++);
 //         }while(num<=10)
-
-
+//      ________________________________________________________________________________________________
 //     4.6 For Loop
 //     for(var i=1;i<=10;i++)
 //     {
 //         console.log(`2 X ${i} = ${2*i} `)
 //     }
 
-
-
 /*
-==================================================================
-5. Functions
+===============================================================================================================
+    5. Functions
     function sum2(a=0,b=0)
     {
         console.log(a+b);
@@ -265,18 +265,100 @@ Q.4 what is differance between ==  and ===
     sum2(); //0
     sum2(50,40); //90
 
+    ________________________________________________________________________________________________
+
   5.1 function expression  
    Assinging a function to a variable 
 
-
-*/
-
-function sum2(a=0,b=0)
+   function sum2(a=0,b=0)
     {
         return a+b;
     }
-var funExp = sum2(50,40); 
-console.log(funExp);
+    var funExp = sum2(50,40); // function expressions
+    console.log(funExp); // 90
+     ________________________________________________________________________________________________
+
+    5.2 Anonymous function
+    var funExp =  function(a=0,b=0)
+    {
+        return a+b;
+    }
+
+    console.log(funExp(20,30)); //50
+*/
+
+/*===============================================================================================================
+// 6. ECMA Script
+
+    6.1 "let" and  "const"
+    
+
+    var => function scope 
+    let & const => block scope 
+
+    function myfun()
+    {
+        if(true)
+        {
+            var fname = "Shaban";
+        }
+        console.log(fname); //shaban
+    }
+    myfun();
 
 
- 
+    function myfun()
+    {
+        if(true)
+        {
+            const fname = "Shaban";
+            let lname ="khan"
+        }
+        console.log(fname); //error
+        console.log(lname); //error
+    }
+    myfun();
+
+    ________________________________________________________________________________________________
+
+    6.2 Temple letrals
+
+    if we want to write a statement with multiple of variables ,
+    it can easily be done using templet letrals 
+
+    e.g for(let i =1;i<=10;i++)
+    {
+        console.log("2 X "+i+" = "+ 2*i)// 2 X 1 = 2 ......
+    }
+
+    this console function can be simply be written as using templet letrals
+        console.log(`2 X ${i} = ${2*i} `)
+
+    ________________________________________________________________________________________________
+
+    6.3 Default Paramenters
+
+    providing a default value in a function's parameter
+
+    function multi(a,b=5)
+    {
+        return a*b;
+    }
+    console.og(multi(5)) // 25
+
+    ________________________________________________________________________________________________
+
+    6.4 Fat Arrow function 
+
+    -> fat arrow says to define a function before calling it.
+    -> if a function has only one statement , then no need to write a return statement
+    -> can not use "this" keyword
+
+    
+    const sum = (a,b) =>  `The sum of two numbers is ${a+b}`;
+    console.log(sum(5,4)); //9
+    
+
+*/
+
+
