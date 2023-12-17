@@ -323,42 +323,139 @@ Q.4 what is differance between ==  and ===
 
     6.2 Temple letrals
 
-    if we want to write a statement with multiple of variables ,
-    it can easily be done using templet letrals 
+       -> if we want to write a statement with multiple of variables ,
+       -> it can easily be done using templet letrals 
 
-    e.g for(let i =1;i<=10;i++)
-    {
-        console.log("2 X "+i+" = "+ 2*i)// 2 X 1 = 2 ......
-    }
+        e.g for(let i =1;i<=10;i++)
+        {
+            console.log("2 X "+i+" = "+ 2*i)// 2 X 1 = 2 ......
+        }
 
-    this console function can be simply be written as using templet letrals
-        console.log(`2 X ${i} = ${2*i} `)
+        this console function can be simply be written as using templet letrals
+            console.log(`2 X ${i} = ${2*i} `)
 
     ________________________________________________________________________________________________
 
     6.3 Default Paramenters
 
-    providing a default value in a function's parameter
+       -> providing a default value in a function's parameter
 
-    function multi(a,b=5)
-    {
-        return a*b;
-    }
-    console.og(multi(5)) // 25
+        function multi(a,b=5)
+        {
+            return a*b;
+        }
+        console.og(multi(5)) // 25
 
     ________________________________________________________________________________________________
 
     6.4 Fat Arrow function 
 
-    -> fat arrow says to define a function before calling it.
-    -> if a function has only one statement , then no need to write a return statement
-    -> can not use "this" keyword
+        -> fat arrow says to define a function before calling it.
+        -> if a function has only one statement , then no need to write a return statement
+        -> can not use "this" keyword
 
-    
-    const sum = (a,b) =>  `The sum of two numbers is ${a+b}`;
-    console.log(sum(5,4)); //9
-    
+        
+        const sum = (a,b) =>  `The sum of two numbers is ${a+b}`;
+        console.log(sum(5,4)); //9
+    ________________________________________________________________________________________________
 
+    6.5 for in loop 
+        -> it itrates over array and give the index 
+
+        var empDAta = ['shaban',24,'male' , 'manoj', 25, 'male'];
+
+        for (let ele in empDAta )
+        {
+            console.log(ele); //0 1 2 3 4 5 
+        }
+
+     ________________________________________________________________________________________________
+
+    6.6 for of loop 
+        ->it itrates over an array and gives the element of that index
+
+        var empDAta = ['shaban',24,'male' , 'manoj', 25, 'male'];
+
+        for(let ele of empDAta)
+        {
+            console.log(ele); // shaban 24 male manoj 25 male
+        }
+     ________________________________________________________________________________________________
+
+     6.7 For Each loop
+
+        ->It is a combination of both for-in and for-off, and it also
+            shows every elements of aaray 
+            var empDAta = ['shaban',24,'male' , 'manoj', 25, 'male'];
+
+            empDAta.forEach(function (ele,index,array) {
+                
+                console.log(`${ele} , index = ${index} , Array elements = ${array}`)
+            })
+
+        -> OutPut 
+        shaban , index = 0 , Array elements = shaban,24,male,manoj,25,male
+        24 , index = 1 , Array elements = shaban,24,male,manoj,25,male
+        male , index = 2 , Array elements = shaban,24,male,manoj,25,male
+        manoj , index = 3 , Array elements = shaban,24,male,manoj,25,male
+        25 , index = 4 , Array elements = shaban,24,male,manoj,25,male
+        male , index = 5 , Array elements = shaban,24,male,manoj,25,male
 */
 
 
+
+/*===============================================================================================================
+// 7. Arrays 
+    in js we can store different variables in same array 
+    var empDAta = ['shaban',24,'male' , 'manoj', 25, 'male'];
+    console.log(empDAta.length) // 3
+
+
+    7.1 Searching And Filter in An Array 
+
+
+
+
+    7.3 CRUD operations in array
+
+        var empDAta = ['shaban',24,'male' , 'manoj', 25, 'male'];
+
+            7.3.1 push()
+            -> add an element from end of an array 
+            -> returns the length of new array 
+
+                var newArray = empDAta.push("World");
+
+                console.log(empDAta); // ['shaban', 24,'male','manoj', 25, 'male','World']
+                console.log(newArray); // 7
+            
+            7.3.2 unshift() 
+                ->adds an element at start of an array
+                ->returns the length of new array 
+
+                var newArray = empDAta.unshift("Hello");
+
+                console.log(empDAta); // ['Hello', 'shaban', 24,'male','manoj', 25, 'male','World']
+                console.log(newArray); // 8
+            
+            7.3.4 pop()
+                -> removes the element form the last position 
+                -> returns the removed element 
+
+                var newArray = empDAta.pop();
+                
+                console.log(empDAta); // ['Hello', 'shaban', 24,'male','manoj', 25, 'male']
+                console.log(newArray); // world
+            
+            7.3.5 shift() 
+
+                ->removed the element from the first position 
+                -> returns the removed element 
+                
+                var newArray = empDAta.shift();
+                
+                console.log(empDAta); // ['shaban', 24,'male','manoj', 25, 'male']
+                console.log(newArray); // Hello
+
+            
+*/
