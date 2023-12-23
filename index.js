@@ -456,6 +456,49 @@ Q.4 what is differance between ==  and ===
                 
                 console.log(empDAta); // ['shaban', 24,'male','manoj', 25, 'male']
                 console.log(newArray); // Hello
+    ________________________________________________________________________________________________
 
-            
+    7.3 Sort an array 
+        It converts elements in string and then sort
+
+        const array = ['Hello', 'shaban', 24,'male','manoj', 25, 'male'];
+        array.sort();
+        console.log(array) // [ 24,       25, 'Hello',  'male','male',   'manoj', 'shaban']
+
+
+        const array = [12, 34,12200,1233,12 , 6];
+        array.sort();
+        console.log(array) // [ 12, 12, 12200, 1233, 34, 6 ]
+
+        //on sorting numbers it will produce an incorrect method
+    ________________________________________________________________________________________________
+    
+    
 */
+
+
+//Q.5 Perform following operation on this array using only 'splice(starting number , delete count number , data )'
+
+// ->splice() method returns the array of elements which id deleted 
+
+// const array = ['January', 'march', 'April','June', 'July'];
+
+// // -> add "December" at the end 
+
+
+// const newMonth = array.splice(array.length, 0,'November');
+// const newNextMonth = array.splice(array.length, 0,'December');
+// console.log(array); // [ 'January',  'march','April','June', 'July','November','December']
+
+// console.log(newMonth);// []
+// console.log(newNextMonth) //[] 
+
+
+
+// // -> update 'march' to march 
+
+// const updateMonth = array.splice(array.indexOf('march'),1,"March");// 
+// console.log(updateMonth) // [ 'march' ]
+// console.log(array)  // [ 'January',  'March','April','June', 'July','November','December']
+
+
