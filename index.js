@@ -502,3 +502,65 @@ Q.4 what is differance between ==  and ===
 // console.log(array)  // [ 'January',  'March','April','June', 'July','November','December']
 
 
+/*________________________________________________________________________________________________
+
+     7.4 map() 
+
+     ->returns a new array containing all the results.
+     -> difference between map() and forEach()
+            -map() is chaninable i.e we can add multiple chain on map().filter().sort()
+             but we can't do that in forEach 
+             - forEach() returns undefine 
+
+    const array = [1,4,9,16,25];
+
+    const newArray = array.map((currElement , index, arr)=>
+    {
+        return `Current element is ${currElement} and it's index is ${index}  from array ${arr} `; 
+    })
+    console.log(array); //[ 1, 4, 9, 16, 25 ]
+    console.log(newArray);
+    [
+        "Current element is 1 and it's index is 0  from array 1,4,9,16,25 ",
+        "Current element is 4 and it's index is 1  from array 1,4,9,16,25 ",
+        "Current element is 9 and it's index is 2  from array 1,4,9,16,25 ",
+        "Current element is 16 and it's index is 3  from array 1,4,9,16,25 ",
+        "Current element is 25 and it's index is 4  from array 1,4,9,16,25 "
+    ]
+
+    7.5 reduce()
+
+        -> use to flatten an array , which means it is use to convert a 
+            2d and 3d array into single dimenssion array
+
+        -> it is also use to find the single value like sum, average of an array 
+
+        const arr1 = [4,9,16,25,36,49];
+        const sum = arr1.reduce((accumulator, ele, index, array)=> accumulator+=ele );
+        console.log(sum) // 139
+
+
+        const array = [[5,4,2,1],[2,0,12],[17,9,8]];
+        console.log(array)
+        const flatArray = array.reduce((acc,ele)=> acc.concat(ele) )
+        console.log(flatArray); //[  5,  4,  2, 1, 2, 0, 12, 17, 9, 8  ]
+    _______________________________________________________________________________________________
+
+*/
+
+//Q.5  (i)find the square root of each element of the arr1
+    // const arr1 = [4,9,16,25,36,49];
+
+    // // const newarr1 = arr1.map((ele)=>
+    // // {
+    // //     return Math.sqrt(ele)
+    // // })
+    // //console.log(newarr1); // [ 2, 3, 4, 5, 6, 7 ]
+
+    // //(ii) Multiply each element by 2 , and returns only those element which are greater by 10
+
+    // const newArray = arr1.map((ele)=> ele *2 ).filter((ele)=> ele>10 )
+    // console.log(newArray) //[ 18, 32, 50, 72, 98 ]
+
+    
+    
