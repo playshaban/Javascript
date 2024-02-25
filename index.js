@@ -85,7 +85,7 @@ console.log(Number.isNaN(NaN)) //true
 ===============================================================================================================
 3. Operators in JavaScript
 
-    3.1 Aassignment operator 
+    //3.1 Aassignment operator 
         var myVar1 = 5
         var myVar2 =5
     
@@ -100,7 +100,7 @@ console.log(Number.isNaN(NaN)) //true
     ________________________________________________________________________________________________
 
 
-   3.2 Arithematic operators 
+   //3.2 Arithematic operators 
     It take two operands and give one output
     console.log(3+5) //8
     console.log(7-2) //5
@@ -110,7 +110,7 @@ console.log(Number.isNaN(NaN)) //true
 
     ________________________________________________________________________________________________
 
-    3.3 Increament and Decrement operator prefix(++i) postfix(i++)
+    //3.3 Increament and Decrement operator prefix(++i) postfix(i++)
 
     var num = 5
     var new_num = num++;
@@ -124,7 +124,7 @@ console.log(Number.isNaN(NaN)) //true
 
     ________________________________________________________________________________________________
 
-    3.4 Comparison operator 
+    //3.4 Comparison operator 
 
     var a =20
     var b=40 
@@ -140,7 +140,7 @@ console.log(Number.isNaN(NaN)) //true
 
     ________________________________________________________________________________________________
 
-    3.5 Logical Operator returns(true/false)
+    //3.5 Logical Operator returns(true/false)
 
     //&& (AND Operator) returns true only if both conditions satisfied
     var a ="40"
@@ -191,73 +191,75 @@ Q.4 what is differance between ==  and ===
 
  */
 
-// ===============================================================================================================
-// 4. Controll statements and loops
-//     4.1 if else statement
-
-//         var isRaining = true;
-//         if(isRaining)
-//         {
-//             console.log("Take Umbrella");
-//         }
-//         else
-//         {
-//             console.log("No Need to take Umbrella");
-//         }
-//      ________________________________________________________________________________________________
-//     4.2 ternary Operator  (condition)?"true":"false"
-//         var age = 18;
-//         console.log((age>=18)? "You  are eligible ":"Not Eligible")
-//         //you are eligible
-//      ________________________________________________________________________________________________
-//     4.3 Switch Statements
-//      
-//         var poption = 3;
-
-//         switch(poption)
-//         {
-//             case 1:
-//                     console.log("You choosed option 1");
-//                     break;
-//             case 2:
-//                 console.log("You choosed option 2");
-//                 break;
-//             case 3:
-//                 console.log("You choosed option 3");
-//                 break;
-//             default:
-//                 console.log("You didn't selected defined option ")
-//                 break;
-
-//         }
-//      ________________________________________________________________________________________________
-
-//     4.4 While loop
-//         var c = 10
-//         while(c--)
-//         {
-//             console.log("Hello world")
-//         }
-
-//      ________________________________________________________________________________________________
-
-//     4.5 do while // it will run minimum 1 time
-
-//         var num =1;
-
-//         do {
-//             console.log(num++);
-//         }while(num<=10)
-//      ________________________________________________________________________________________________
-//     4.6 For Loop
-//     for(var i=1;i<=10;i++)
-//     {
-//         console.log(`2 X ${i} = ${2*i} `)
-//     }
-
 /*
 ===============================================================================================================
-    5. Functions
+4. Controll statements and loops
+    4.1 if else statement
+
+        var isRaining = true;
+        if(isRaining)
+        {
+            console.log("Take Umbrella");
+        }
+        else
+        {
+            console.log("No Need to take Umbrella");
+        }
+     ________________________________________________________________________________________________
+    4.2 ternary Operator  (condition)?"true":"false"
+        var age = 18;
+        console.log((age>=18)? "You  are eligible ":"Not Eligible")
+        //you are eligible
+     ________________________________________________________________________________________________
+    4.3 Switch Statements
+     
+        var poption = 3;
+
+        switch(poption)
+        {
+            case 1:
+                    console.log("You choosed option 1");
+                    break;
+            case 2:
+                console.log("You choosed option 2");
+                break;
+            case 3:
+                console.log("You choosed option 3");
+                break;
+            default:
+                console.log("You didn't selected defined option ")
+                break;
+
+        }
+     ________________________________________________________________________________________________
+
+    4.4 While loop
+        var c = 10
+        while(c--)
+        {
+            console.log("Hello world")
+        }
+
+     ________________________________________________________________________________________________
+
+    4.5 do while // it will run minimum 1 time
+
+        var num =1;
+
+        do {
+            console.log(num++);
+        }while(num<=10)
+     ________________________________________________________________________________________________
+    4.6 For Loop
+    for(var i=1;i<=10;i++)
+    {
+        console.log(`2 X ${i} = ${2*i} `)
+    }
+
+*/
+/*
+===============================================================================================================
+5. Functions
     function sum2(a=0,b=0)
     {
         console.log(a+b);
@@ -288,7 +290,7 @@ Q.4 what is differance between ==  and ===
 */
 
 /*===============================================================================================================
-// 6. ECMA Script
+6. ECMA Script
 
     6.1 "let" and  "const"
     
@@ -405,7 +407,7 @@ Q.4 what is differance between ==  and ===
 
 
 /*===============================================================================================================
-// 7. Arrays 
+7. Arrays 
     in js we can store different variables in same array 
     var empDAta = ['shaban',24,'male' , 'manoj', 25, 'male'];
     console.log(empDAta.length) // 3
@@ -472,7 +474,51 @@ Q.4 what is differance between ==  and ===
 
         //on sorting numbers it will produce an incorrect method
     ________________________________________________________________________________________________
-    
+
+     7.4 map() 
+
+     ->returns a new array containing all the results.
+     -> difference between map() and forEach()
+            -map() is chaninable i.e we can add multiple chain on map().filter().sort()
+             but we can't do that in forEach 
+             - forEach() returns undefine 
+
+    const array = [1,4,9,16,25];
+
+    const newArray = array.map((currElement , index, arr)=>
+    {
+        return `Current element is ${currElement} and it's index is ${index}  from array ${arr} `; 
+    })
+    console.log(array); //[ 1, 4, 9, 16, 25 ]
+    console.log(newArray);
+    [
+        "Current element is 1 and it's index is 0  from array 1,4,9,16,25 ",
+        "Current element is 4 and it's index is 1  from array 1,4,9,16,25 ",
+        "Current element is 9 and it's index is 2  from array 1,4,9,16,25 ",
+        "Current element is 16 and it's index is 3  from array 1,4,9,16,25 ",
+        "Current element is 25 and it's index is 4  from array 1,4,9,16,25 "
+    ]
+
+    ________________________________________________________________________________________________
+
+    7.5 reduce()
+
+        -> use to flatten an array , which means it is use to convert a 
+            2d and 3d array into single dimenssion array
+
+        -> it is also use to find the single value like sum, average of an array 
+
+        const arr1 = [4,9,16,25,36,49];
+        const sum = arr1.reduce((accumulator, ele, index, array)=> accumulator+=ele );
+        console.log(sum) // 139
+
+
+        const array = [[5,4,2,1],[2,0,12],[17,9,8]];
+        console.log(array)
+        const flatArray = array.reduce((acc,ele)=> acc.concat(ele) )
+        console.log(flatArray); //[  5,  4,  2, 1, 2, 0, 12, 17, 9, 8  ]
+    _______________________________________________________________________________________________
+
     
 */
 
@@ -502,53 +548,8 @@ Q.4 what is differance between ==  and ===
 // console.log(array)  // [ 'January',  'March','April','June', 'July','November','December']
 
 
-/*________________________________________________________________________________________________
 
-     7.4 map() 
-
-     ->returns a new array containing all the results.
-     -> difference between map() and forEach()
-            -map() is chaninable i.e we can add multiple chain on map().filter().sort()
-             but we can't do that in forEach 
-             - forEach() returns undefine 
-
-    const array = [1,4,9,16,25];
-
-    const newArray = array.map((currElement , index, arr)=>
-    {
-        return `Current element is ${currElement} and it's index is ${index}  from array ${arr} `; 
-    })
-    console.log(array); //[ 1, 4, 9, 16, 25 ]
-    console.log(newArray);
-    [
-        "Current element is 1 and it's index is 0  from array 1,4,9,16,25 ",
-        "Current element is 4 and it's index is 1  from array 1,4,9,16,25 ",
-        "Current element is 9 and it's index is 2  from array 1,4,9,16,25 ",
-        "Current element is 16 and it's index is 3  from array 1,4,9,16,25 ",
-        "Current element is 25 and it's index is 4  from array 1,4,9,16,25 "
-    ]
-
-    7.5 reduce()
-
-        -> use to flatten an array , which means it is use to convert a 
-            2d and 3d array into single dimenssion array
-
-        -> it is also use to find the single value like sum, average of an array 
-
-        const arr1 = [4,9,16,25,36,49];
-        const sum = arr1.reduce((accumulator, ele, index, array)=> accumulator+=ele );
-        console.log(sum) // 139
-
-
-        const array = [[5,4,2,1],[2,0,12],[17,9,8]];
-        console.log(array)
-        const flatArray = array.reduce((acc,ele)=> acc.concat(ele) )
-        console.log(flatArray); //[  5,  4,  2, 1, 2, 0, 12, 17, 9, 8  ]
-    _______________________________________________________________________________________________
-
-*/
-
-//Q.5  (i)find the square root of each element of the arr1
+//Q.6  (i)find the square root of each element of the arr1
     // const arr1 = [4,9,16,25,36,49];
 
     // // const newarr1 = arr1.map((ele)=>
@@ -563,4 +564,146 @@ Q.4 what is differance between ==  and ===
     // console.log(newArray) //[ 18, 32, 50, 72, 98 ]
 
     
+/*===============================================================================================================
+8. Strings
+
+->Strings can be declred using single or double quote sign or tamplete letrals``
+
+    //8.1 length 
+
+    const str = "Hello , I'am Shaban Khan";
+    console.log(str) // 
+    console.log(str.length) //24
+
+    ________________________________________________________________________________________________
+
+
+    //8.2 Escape Characters
+
+    const str = "This is a \"string \" which is using ecape character ";
+    console.log(str) // This is a "string " which is using ecape character 
+
+    ________________________________________________________________________________________________
+
+
+    //8.3 finding string in a string and search()
+
+    const str = "Hello , I'am Shaban Khan";
+    console.log(str.indexOf("Shaban")); //13
+    console.log(str.indexOf("Play")); // -1 (not found)
+
+
+    console.log(str.indexOf("a")) // 10
+    //finding a character after 13th place 
+    console.log(str.indexOf("a",13)) //15
+
+    console.log(str.search("Shaban"))// 13
+    ________________________________________________________________________________________________
+
+    //8.4 Extracting String parts slice(start,end) , 
+
+    ->slice() includes the starting point but excludes the end point
+
+    var str = "Apple, Banana , Kiwi";
+
+    var res = str.slice(0,5);
+    console.log(res) // Apple
+    console.log(str.slice(7,-2)) // Banana , Ki
+
+    ->substring() it is similar to slice(), but it doesn't takes 
+        negative value 
+
+        console.log(str.substring(0,5)) //Apple
+        console.log(str.substring(8,-1)) // Apple, B
     
+    -> substr() we cann't add negative in range 
+        we can use it to extracting from last position
+        
+        console.log(str.substr(-4)) // Kiwi
+
+_______________________________________________________________________________________________
+
+
+//Q.7 display only 280 characters of string  
+//    const mytext = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus reiciendis pariatur fuga sapiente cumque voluptates minima quis eaque quibusdam impedit, perspiciatis quam incidunt sequi possimus aperiam? Impedit alias culpa earum!
+//    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum explicabo vero alias corrupti quod, consequuntur porro laboriosam quis error optio totam! Quo aliquam dignissimos ipsa iste, reiciendis dolorem impedit!
+//    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro soluta rem reprehenderit aliquam labore sunt maiores fugit inventore expedita suscipit qui, tempora nostrum repudiandae temporibus blanditiis dolorem unde in ducimus.
+//    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae cumque natus possimus, sunt nihil provident doloribus harum cupiditate odit, quis maxime, animi adipisci perferendis accusamus quo mollitia error debitis eos.`;
+
+//    const shortText =mytext.slice(0,280);
+//    console.log(shortText);
+//    console.log(shortText.length); //280
+
+_______________________________________________________________________________________________
+
+    //8.5 Replacing string contents
+    
+    ->replace() , this function returns a new string by changing the first occurance of the word
+    ->this is a case sensitive 
+
+    const text = `Shaban , Hello wrold this is Shaban Khan`;
+    let replacedText = text.replace('Shaban','playshaban');
+    console.log(replacedText); // playshaban, Hello world this is Shaban khan
+
+    ________________________________________________________________________________________________
+
+
+    //8.6 finding character at a position
+    ->charAt(index_position) returns a charater
+
+
+    const text = `Shaban , Hello wrold this is Shaban Khan`;
+    console.log(text.charAt(10)); // e
+
+
+    ________________________________________________________________________________________________
+
+
+    //8.7 finding character unicode at a position
+    -> it does not accepts the negative value
+
+    const text = `Shaban , Hello wrold this is Shaban Khan`;
+    console.log(text.charCodeAt(10)); // 101
+
+
+    ________________________________________________________________________________________________
+
+
+    //8.8 changing cases of string 
+    -> toUpperCase()
+    -> toLowerCase()
+
+    const text = `Shaban , Hello wrold this is Shaban Khan`;
+    console.log(text.toUpperCase()); // SHABAN , HELLO WROLD THIS IS SHABAN KHAN
+    console.log(text.toLowerCase()) // shaban , hello wrold this is shaban khan
+
+    ________________________________________________________________________________________________
+
+
+    //8.9 concatination of strings
+    -> str1.concat(str2)
+
+    let text = `Shaban , Hello wrold this is Shaban Khan`;
+    let newText = text.concat(". Rule the world")
+    console.log(newText) // Shaban , Hello wrold this is Shaban Khan. Rule the world
+
+    //8.10 removing blank spaces form start and end of an string 
+    ->str.trim()
+
+    let text = `    Shaban , Hello wrold this is Shaban Khan    `;
+    console.log(text.trim()) // `Shaban , Hello wrold this is Shaban Khan. Rule the world`
+
+    ________________________________________________________________________________________________
+    //8.11 converting a stirng into an array 
+
+    str.split('breaking_character');
+
+    let text = `Shaban , Hello wrold this is Shaban Khan`;
+
+    console.log(text.split(" ")) // [ 'Shaban',  ',' , 'Hello',  'wrold', 'this',   'is', 'Shaban', 'Khan' ]
+
+
+
+===============================================================================================================
+*/
+
