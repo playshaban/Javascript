@@ -696,14 +696,22 @@ ________________________________________________________________________________
     ________________________________________________________________________________________________
     //8.11 converting a stirng into an array 
 
-    str.split('breaking_character');
+    str.split('~breaking_character~');
 
     let text = `Shaban , Hello wrold this is Shaban Khan`;
 
     console.log(text.split(" ")) // [ 'Shaban',  ',' , 'Hello',  'wrold', 'this',   'is', 'Shaban', 'Khan' ]
 
-
-
 ===============================================================================================================
+9. Date and Time object in javacripe 
+    It is created by a `new Date() ` constructor. 
+
+    It takes max 7 arguments 
+    
+    Date(year, month , day , hour ,  minutes , seconds , millisconds)
+
+    let D = new Date()
+    console.log(D) //2025-01-23T18:23:51.205Z
 */
+
 
