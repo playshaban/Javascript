@@ -718,6 +718,13 @@ ________________________________________________________________________________
     console.log(D.toDateString()) // Thu Jan 23 2025
     console.log(D.toString()) //Thu Jan 23 2025 23:57:41 GMT+0530 (India Standard Time)
 
-    Date.now() returns the mmilli seconds since Jan 1 ,1970
+    ->Date.now() returns the mmilli seconds since Jan 1 ,1970
+
     console.log(Date.now()) //1737656932291
+
+    let D = new Date(2022, 0 , 10 , 10, 10 ,10, 0 )
+    console.log(D.toLocaleString()) // 10/1/2022, 10:10:10 am
+    
 */
+
+
